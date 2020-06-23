@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 // import BackgroundSection from '../components/Globals/BackgroundSection';
 
-import Products from '../components/Home/Products'
+import ProductClass from '../components/Home/ProductClass'
 
 
 const ShopPage = ({ data }) => (
@@ -17,7 +17,7 @@ const ShopPage = ({ data }) => (
       title="Shop"
       styleClass="about-background"
     /> */}
-    <Products />
+    <ProductClass products={data.product} />
   </Layout >
 );
 
@@ -29,6 +29,21 @@ export const query = graphql`
     childImageSharp{
       fluid(quality:100) {
         ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+  }
+  product:allContentfulHappyProduct {
+    edges {
+      node {
+        id
+        title
+        category
+        price
+        image {
+          fixed(width:100,height:100){
+            ...GatsbyContentfulFixed_tracedSVG
+          }
+        }
       }
     }
   }

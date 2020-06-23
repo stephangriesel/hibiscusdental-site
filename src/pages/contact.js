@@ -11,7 +11,7 @@ const ContactPage = ({ data }) => (
     {/* <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="About Us"
-      styleClass="about-background"
+      styleClass=""
     /> */}
     <Contact />
   </Layout>

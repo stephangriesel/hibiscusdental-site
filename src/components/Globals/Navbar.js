@@ -21,7 +21,7 @@ export default class Navbar extends Component {
             },
             {
                 id: 3,
-                path: "/newshop",
+                path: "/shop",
                 text: "shop"
             },
             // {
@@ -50,7 +50,7 @@ export default class Navbar extends Component {
         return (
             <nav className="navbar navbar-expand-sm navbar-light">
                 <Link to="/" className="navbar-brand fade-in">
-                    <h1>Happy Skin</h1>
+                    <h1>Hibiscus Dental Care</h1>
                 </Link>
                 <button className="navbar-toggler" type="button" onClick={this.navbarHandler}>
                     <span className="navbar-toggler-icon"></span>
